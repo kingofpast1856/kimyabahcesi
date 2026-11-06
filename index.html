@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kimya Bahçesi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast"></div>
+<div id="modal" hidden></div>
+<div id="maint" hidden><div><div class="logo">🛠️<small>Bakımdayız</small></div><p class="mute" id="maintx">Kısa süre sonra döneceğiz.</p></div></div>
+
+<div id="auth"><div class="box">
+ <div class="logo">KİMYA BAHÇESİ<small>Büyüt, deney yap, takas et</small></div>
+ <div class="seg"><button id="bl" class="on">Giriş</button><button id="br">Kayıt ol</button></div>
+ <input id="nm" placeholder="Kullanıcı adın" maxlength="16" hidden autocomplete="nickname">
+ <input id="em" type="email" placeholder="E-posta" autocomplete="email">
+ <input id="pw" type="password" placeholder="Şifre (en az 6 karakter)" autocomplete="current-password">
+ <div class="err" id="err"></div>
+ <button class="gold" id="go" style="width:100%">Giriş yap</button>
+</div></div>
+
+<div id="app" hidden>
+ <div class="hdr"><div class="av" id="av"></div><div class="grow"><div class="nm" id="un"></div><div class="mute" id="lv"></div><div class="xp"><i id="xb"></i></div></div><div class="coin" id="coin"></div></div>
+ <div class="announce" id="ann" hidden></div>
+ <div class="warn" id="rulewarn" hidden></div>
+ <div id="wx" role="button" tabindex="0"></div>
+ <div class="view on" id="v-garden">
+  <canvas id="cv" width="352" height="352" aria-label="Bahçe"></canvas>
+  <div class="bar" id="tools"></div>
+  <div id="pal"></div>
+  <div class="msg" id="msg"></div>
+ </div>
+ <div class="view" id="v-dyn"></div>
+</div>
+<nav id="nav" hidden></nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.12.2/firebase-app-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.12.2/firebase-auth-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.12.2/firebase-firestore-compat.min.js"></script>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
